@@ -1,0 +1,17 @@
+@import url(./_place/newsletter__name_place_footer.css);
+
+.newsletter__name {
+    min-height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3px; 
+    padding: 15px 10px;         
+}
+
+.newsletter__name::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #AEB3BB;
+}

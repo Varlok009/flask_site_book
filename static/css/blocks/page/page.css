@@ -1,0 +1,30 @@
+@import url(./__content/page__content.css);
+@import url(./__footer/page__footer.css);
+@font-face {
+    font-family: "PT-sans", sans-serif;
+    src: url(../../vendor/font/PT-sans/PTS55F.ttf) format("ttf");
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "PT-sans", sans-serif;
+    src: url(../../vendor/font/PT-sans/PTS56F.ttf) format("ttf");
+    font-style: italic; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "PT-sans", sans-serif;
+    src: url(../../vendor/font/PT-sans/PTS75F.ttf) format("ttf");
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+.page {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    font-family: "PT-sans", sans-serif;
+    margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+@import url(./__link/small-post__link.css);
+@import url(./__pic/small-post__pic.css);
+@import url(./__post/small-post__post.css);
+@import url(./__subtitle/small-post__subtitle.css);
+@import url(./__title/small-post__title.css);
+@import url(./__card/small-post__card.css);
+@import url(./_shadow/small-post_shadow.css);
+
+.small-post {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+

@@ -1,0 +1,14 @@
+@import url(./__link/instagram__link.css);
+@import url(./__list-item/instagram__list-item.css);
+@import url(./__list/instagram__list.css);
+@import url(./__pic/instagram__pic.css);
+@import url(./__head/instagram__head.css);
+@import url(./_margin/instagram_margin_top.css);
+@import url(./__icon/instagram__icon.css);
+@import url(./__pic/_border/instagram__pic_border.css);
+@import url(./__big-button/instagram__big-button.css);
+
+.instagram {
+    display: flex;
+    flex-direction: column;
+}

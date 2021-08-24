@@ -1,0 +1,8 @@
+.instagram__pic_border {
+    
+}
+
+.instagram__pic_border:hover {
+    box-shadow: 5px 5px 15px #232323;
+    transition: box-shadow 0.3s ease;
+}

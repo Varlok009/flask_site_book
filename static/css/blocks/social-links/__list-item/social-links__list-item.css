@@ -1,0 +1,10 @@
+.social-links__list-item {
+    background-color: #373737;
+    border-radius: 3px;
+    margin-left: 15px; 
+    
+}
+
+.social-links__list-item:nth-of-type(1) {
+    margin-left: 0;
+}

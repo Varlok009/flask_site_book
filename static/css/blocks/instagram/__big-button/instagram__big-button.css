@@ -1,0 +1,12 @@
+.instagram__big-button {
+    text-decoration: none;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.instagram__big-button:hover {
+    border: 2px solid #4A90E2;
+    margin: -2px;
+}

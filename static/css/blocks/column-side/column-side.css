@@ -1,0 +1,10 @@
+@import url(./__popular-posts/column-side__popular-posts.css);
+@import url(./__instagram/column-side__instagram.css);
+@import url(./__tags/column-side__tags.css);
+@import url(./__newsletter/column-side__newsletter.css);
+
+.column-side {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+}

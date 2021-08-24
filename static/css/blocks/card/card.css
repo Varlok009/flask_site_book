@@ -1,0 +1,12 @@
+.card {
+    background-color: #4A90E2;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    margin: 0;
+    width: 60px;
+    text-align: center;
+    padding: 4px 0 2px;
+}

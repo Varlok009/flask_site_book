@@ -1,0 +1,26 @@
+.img-article-block__pic_transform_scale {
+    filter: brightness(60%); 
+    transition: filter 0.5s linear;   
+}
+
+.img-article-block__pic_transform_scale:hover .img-article-block__text {
+    text-decoration: underline;
+}
+
+.img-article-block__pic_transform_scale:hover .img-article-block__pic {
+    transform: scale(1.1);
+    
+}
+
+.img-article-block__pic_transform_scale .img-article-block__pic {
+    transition: transform 0.5s linear;
+}
+
+.img-article-block__pic_transform_scale:hover {
+    filter: brightness(100%);
+}
+
+.img-article-block__pic_transform_scale:hover {
+    filter: brightness(100%);
+    
+}

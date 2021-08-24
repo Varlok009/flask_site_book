@@ -1,0 +1,7 @@
+.footer__top-row {
+    min-width: 1170px;
+    display: flex;
+    background-color:#171717;
+    color: white;
+    padding: 60px 0 50px;
+}

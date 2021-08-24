@@ -1,0 +1,5 @@
+.social-links__pic {
+    width: 35px;
+    object-fit: cover;
+    border-radius: 3px;
+}

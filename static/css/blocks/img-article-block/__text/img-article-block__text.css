@@ -1,0 +1,12 @@
+.img-article-block__text {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    margin: 0;
+    width: 80%;
+}

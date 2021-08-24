@@ -1,0 +1,11 @@
+@import url(./__head/tags__head.css);
+@import url(./__link/tags__link.css);
+@import url(./__list-item/tags__list-item.css);
+@import url(./__list/tags__list.css);
+@import url(./__link/_decoration/tags__link_decoration.css);
+
+.tags {
+    display: flex;
+    flex-direction: column;
+}
+

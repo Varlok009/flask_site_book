@@ -1,0 +1,10 @@
+@import url(./__head/social-links__head.css);
+@import url(./__list-item/social-links__list-item.css);
+@import url(./__list/social-links__list.css);
+@import url(./__pic/social-links__pic.css);
+@import url(./__link/social-links__link.css);
+@import url(./__list-item/_border/social-links__list-item_border.css);
+
+.social-links {
+   
+}

@@ -1,0 +1,6 @@
+@import url(./__big-post/column-main__big-post.css);
+.column-main {
+    width: 770px;
+    display: flex;
+    flex-direction: column;
+}

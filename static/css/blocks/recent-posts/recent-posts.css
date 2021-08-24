@@ -1,0 +1,9 @@
+@import url(./__head/recent-posts__head.css);
+@import url(./_shadow/recent-posts_shadow.css);
+@import url(./__row-post/recent-posts__row-post.css);
+
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,8 @@
+.social-links__list-item_border {
+        
+}
+
+.social-links__list-item_border:hover {
+ outline: 1px solid #4A90E2;
+ 
+}

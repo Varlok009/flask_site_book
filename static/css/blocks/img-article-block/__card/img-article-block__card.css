@@ -1,0 +1,7 @@
+.img-article-block__card {
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 4px 12px 2px;
+}

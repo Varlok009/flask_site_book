@@ -1,0 +1,10 @@
+.bloger-annotation__big-button {
+    text-decoration: none;
+    margin: 0;
+    text-align: center;  
+}
+
+.bloger-annotation__big-button:hover {
+    border: 2px solid #4A90E2;
+    margin: -2px;
+}

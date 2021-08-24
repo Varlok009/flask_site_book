@@ -1,0 +1,9 @@
+.big-post__link {
+    text-decoration: none;
+    color: black;
+}
+
+.big-post__link:hover {
+text-decoration: underline;
+/* text-decoration-color: #4A90E2; */
+}

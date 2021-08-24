@@ -1,0 +1,14 @@
+@import url(./__search/header__search.css);
+@import url(./__content/header__content.css);
+@import url(./__logo/header__logo.css);
+
+.header {
+  max-width: 1920px;
+  min-height: 90px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ 
+}

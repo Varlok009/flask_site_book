@@ -1,0 +1,8 @@
+.row-post__link {
+    text-decoration: none;
+    color: white;   
+}
+
+.row-post__link:hover {
+    text-decoration: underline;
+}

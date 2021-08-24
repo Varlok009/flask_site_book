@@ -1,0 +1,9 @@
+
+.navigation__list-item_border {
+   
+}
+
+.navigation__list-item_border:hover {
+   border-bottom: 2px solid;
+   border-image: linear-gradient( to right, white 20%, #4A90E2 60%) 1 0%;
+}

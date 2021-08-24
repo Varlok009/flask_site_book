@@ -1,0 +1,17 @@
+.big-post__pic_transform_scale {
+       
+}
+
+.big-post:hover .big-post__title {
+    text-decoration: underline;
+    
+}
+
+.big-post:hover .big-post__pic_transform_scale {
+    transform: scale(1.1);
+    
+}
+
+.big-post .big-post__pic_transform_scale {
+    transition: transform 1s linear;
+}

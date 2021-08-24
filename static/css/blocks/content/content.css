@@ -1,0 +1,11 @@
+@import url(./__img-article-block/content__img-article-block.css);
+@import url(./__two-column/content__two-column.css);
+@import url(./__list-pages/content__list-pages.css);
+@import url(./__most-popular/content__most-popular.css);
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    margin: 0 auto;
+}

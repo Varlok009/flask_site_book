@@ -1,0 +1,5 @@
+.big-post__pic-container {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden; 
+}

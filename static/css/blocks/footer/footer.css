@@ -1,0 +1,21 @@
+@import url(./__about/footer__about.css);
+@import url(./__bottom-row/footer__bottom-row.css);
+@import url(./__copi-right/footer__copi-right.css);
+@import url(./__text/footer__text.css);
+@import url(./__top-row/footer__top-row.css);
+@import url(./__bottom-row-content/footer__bottom-row-content.css);
+@import url(./__newsletter/footer__newsletter.css);
+@import url(./__logo/footer__logo.css);
+@import url(./__social-links/footer__social-links.css);
+@import url(./__recent-posts/footer__recent-posts.css);
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    min-width: 1170px;
+    background-color:#171717;
+    
+}

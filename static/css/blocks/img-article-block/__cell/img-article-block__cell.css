@@ -1,0 +1,6 @@
+.img-article-block__cell {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}

@@ -1,0 +1,14 @@
+.tags__link_decoration {
+        
+}
+
+.tags__link:hover {
+    color: #4A90E2;
+    background-color: seashell;
+    border: 2px solid;
+    border-image: linear-gradient( to right, white 5%, #4A90E2 80%) 1;
+    margin: -2px;
+    border-radius: 3px;
+    /* outline: 1px solid #4A90E2; */
+    transition: color 0.2s linear, background-color 0.2s linear, outline 0.2s linear;
+}

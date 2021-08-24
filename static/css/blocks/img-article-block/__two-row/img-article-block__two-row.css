@@ -1,0 +1,7 @@
+.img-article-block__two-row {
+	display: flex;
+	max-width: 770px;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+}

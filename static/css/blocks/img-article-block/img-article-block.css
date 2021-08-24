@@ -1,0 +1,14 @@
+@import url(./__article-author/img-article-block__article-author.css);
+@import url(./__cell/img-article-block__cell.css);
+@import url(./__link/img-article-block__link.css);
+@import url(./__one-column/img-article-block__one-column.css);
+@import url(./__pic/img-article-block__pic.css);
+@import url(./__two-row/img-article-block__two-row.css);
+@import url(./__text/img-article-block__text.css);
+@import url(./__pic/_transform/img-article-block__pic_transform_scale.css);
+@import url(./__card/img-article-block__card.css);
+
+.img-article-block {
+	display: flex;
+	justify-content: space-between;
+}
