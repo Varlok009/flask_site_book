@@ -1,4 +1,4 @@
 .two-column {
     display: flex;
-    justify-content: space-between;       
+    justify-content: center;
 }

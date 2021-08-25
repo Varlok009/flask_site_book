@@ -1,6 +1,102 @@
 {% extends 'base.html' %}
 
-{% block content %}
-{{ super() }}
 
-{% endblock %}
+{% block content -%}
+{{ super() }}
+        <!-- Секция img-article-block -->
+      {% block article -%}
+      <section class="img-article-block content__img-article-block">
+
+        <div class="img-article-block__one-column">
+          <article class="img-article-block__cell img-article-block__pic_transform_scale">
+            <a href="#" class="img-article-block__link">
+              <img src="./static/images/idiot.jpeg" alt="Gray mercedes" class="img-article-block__pic">
+              <p class="card img-article-block__card">Book</p>
+              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
+              <p class="img-article-block__text">One of Saturn's largest rings
+                 may be newer than anyone
+              </p>
+            </a>
+          </article>
+        </div>
+
+        <div class="img-article-block__two-row">
+          <article class="img-article-block__cell img-article-block__pic_transform_scale">
+            <a href="#" class="img-article-block__link">
+              <img src="./static/images/first-line-ms.png" alt="Yellow mercedes" class="img-article-block__pic">
+              <p class="card img-article-block__card">Vehicle</p>
+              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
+              <p class="img-article-block__text">One of Saturn's largest rings
+                 may be newer than anyone
+              </p>
+            </a>
+          </article>
+          <article class="img-article-block__cell img-article-block__pic_transform_scale">
+            <a href="#" class="img-article-block__link">
+              <img src="./static/images/first-line-audi.png" alt="White audi" class="img-article-block__pic">
+              <p class="card img-article-block__card">Vehicle</p>
+              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
+              <p class="img-article-block__text">One of Saturn's largest rings
+                 may be newer than anyone
+              </p>
+            </a>
+          </article>
+          <article class="img-article-block__cell img-article-block__pic_transform_scale">
+            <a href="#" class="img-article-block__link">
+              <img src="./static/images/second-line-audi.png" alt="Black audi" class="img-article-block__pic">
+              <p class="card img-article-block__card">Vehicle</p>
+              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
+              <p class="img-article-block__text">One of Saturn's largest rings
+                 may be newer than anyone
+              </p>
+            </a>
+          </article>
+          <article class="img-article-block__cell img-article-block__pic_transform_scale">
+            <a href="#" class="img-article-block__link">
+              <img src="./static/images/swcond-line-mg.png" alt="Black mg" class="img-article-block__pic">
+              <p class="card img-article-block__card">Vehicle</p>
+              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
+              <p class="img-article-block__text">One of Saturn's largest rings
+                 may be newer than anyone
+              </p>
+            </a>
+          </article>
+
+
+        </div>
+
+      </section>
+
+      <!-- Секция articles -->
+
+      <div class="two-column content__two-column">
+
+        <section class="column-main">
+
+          <article class="big-post column-main__big-post">
+            <div class="big-post__pic-container">
+              <img src="./static/images/main-posts/ms.png" alt="Black Mercedes" class="big-post__pic big-post__pic_transform_scale">
+            </div>
+            <div class="big-post__annotation">
+              <p class="card big-post__card">Vehicle</p>
+              <a href="#" class="big-post__link">
+                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
+              </a>
+              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
+              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
+              sit voluptatem accusantium doloremque laudantium, totam rem</p>
+            </div>
+          </article>
+
+        {% endblock article -%}
+        </section>
+
+        </div>
+
+      </div>
+
+      </section>
+
+
+{% endblock content -%}

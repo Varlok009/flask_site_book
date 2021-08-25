@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for post in posts -%}
+<p>Article name: {{post.article}}.
+    Article author name: {{post.author}}.
+{% endfor -%}
+{% endblock content %}

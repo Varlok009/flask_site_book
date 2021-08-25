@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/css/pages/base.css">
+    <link rel="stylesheet" href="{{url_for('static', filename="/css/pages/base.css")}}">
     {% block title -%}
     {% if title -%}
         <title>{{title}}</title>
@@ -39,379 +39,17 @@
     </section>
 
     <main class="content page__content">
-    {% block content -%}
-        <!-- Секция img-article-block -->
-      {% block article -%}
-      <section class="img-article-block content__img-article-block">
+      {% block content %}
 
-        <div class="img-article-block__one-column">
-          <article class="img-article-block__cell img-article-block__pic_transform_scale">
-            <a href="#" class="img-article-block__link">
-              <img src="./static/images/idiot.jpeg" alt="Gray mercedes" class="img-article-block__pic">
-              <p class="card img-article-block__card">Book</p>
-              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
-              <p class="img-article-block__text">One of Saturn's largest rings
-                 may be newer than anyone
-              </p>
-            </a>
-          </article>
-        </div>
-
-        <div class="img-article-block__two-row">
-          <article class="img-article-block__cell img-article-block__pic_transform_scale">
-            <a href="#" class="img-article-block__link">
-              <img src="./static/images/first-line-ms.png" alt="Yellow mercedes" class="img-article-block__pic">
-              <p class="card img-article-block__card">Vehicle</p>
-              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
-              <p class="img-article-block__text">One of Saturn's largest rings
-                 may be newer than anyone
-              </p>
-            </a>
-          </article>
-          <article class="img-article-block__cell img-article-block__pic_transform_scale">
-            <a href="#" class="img-article-block__link">
-              <img src="./static/images/first-line-audi.png" alt="White audi" class="img-article-block__pic">
-              <p class="card img-article-block__card">Vehicle</p>
-              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
-              <p class="img-article-block__text">One of Saturn's largest rings
-                 may be newer than anyone
-              </p>
-            </a>
-          </article>
-          <article class="img-article-block__cell img-article-block__pic_transform_scale">
-            <a href="#" class="img-article-block__link">
-              <img src="./static/images/second-line-audi.png" alt="Black audi" class="img-article-block__pic">
-              <p class="card img-article-block__card">Vehicle</p>
-              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
-              <p class="img-article-block__text">One of Saturn's largest rings
-                 may be newer than anyone
-              </p>
-            </a>
-          </article>
-          <article class="img-article-block__cell img-article-block__pic_transform_scale">
-            <a href="#" class="img-article-block__link">
-              <img src="./static/images/swcond-line-mg.png" alt="Black mg" class="img-article-block__pic">
-              <p class="card img-article-block__card">Vehicle</p>
-              <p class="img-article-block__article-author">Rickie Baroch - June 6, 2019</p>
-              <p class="img-article-block__text">One of Saturn's largest rings
-                 may be newer than anyone
-              </p>
-            </a>
-          </article>
-          
-          
-        </div>
-
-      </section>
-
-      <!-- Секция two-column -->
-      
-      <div class="two-column content__two-column">
-
-        <section class="column-main">
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/ms.png" alt="Black Mercedes" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/bmw.png" alt="Blue Bmw" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/mc-laren.png" alt="White McLaren" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/chev.png" alt="Grey Chevrolet" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/jeep.png" alt="Grey Jeep" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-          
-        {% endblock article -%}
-        </section>
-
-        <div class="column-side">
-
-<!--          <article class="bloger-annotation">-->
-<!--            <img src="./static/images/bloger/hunt.png" alt="Leon Hunt" class="bloger-annotation__pic">-->
-<!--            <h2 class="bloger-annotation__title">Leon Hunt</h2>-->
-<!--            <p class="bloger-annotation__subtitle">Food & cooking bloger</p>-->
-<!--            <p class="bloger-annotation__text">Hi, I'm Leon. Cooking is the way I express my creative side-->
-<!--                                        to the world. Welcome to my Kitchen Corner on…</p>-->
-<!--            <a href="#" class="big-button bloger-annotation__big-button">Continue Reading</a>-->
-<!--          </article>-->
-
-          <section class="popular-posts column-side__popular-posts">
-            
-            <h2 class="popular-posts__head">Popular posts</h2>
-
-            <article class="small-post popular-posts__small-post small-post_shadow">
-              <img src="./static/images/popular-posts/ms.png" alt="Mercedes" class="small-post__pic">
-              <p class="card small-post__card">Vehicle</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-            <article class="small-post popular-posts__small-post small-post_shadow">
-              <img src="./static/images/popular-posts/jeep.png" alt="Jeep" class="small-post__pic">
-              <p class="card small-post__card">Vehicle</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-            <article class="small-post popular-posts__small-post small-post_shadow">
-              <img src="./static/images/popular-posts/ty.png" alt="Toyota" class="small-post__pic">
-              <p class="card small-post__card">Vehicle</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-            
-
-          </section>
-
-          <section class="instagram column-side__instagram">
-            <h2 class="instagram__head">Instagram</h2>
-
-            <ui class="instagram__list">
-              
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/f12.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/audi.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/lr.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/ford.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/juk.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-              <li class="instagram__list-item">
-                <a href="#" class="instagram__link">
-                  <img src="./static/images/instagram/ferrari.png" alt="Photo" class="instagram__pic instagram__pic_border">
-                </a>
-              </li>
-
-            </ui>
-            
-            <a href="#" class="big-button instagram__big-button">
-              <img class="instagram__icon" src="./static/images/social-iconc/i/inst-inst.PNG" alt="I">
-              View instagram
-            </a>
-          </section>
-          
-          <section class="tags column-side__tags">
-            <h2 class="tags__head">Tags</h2>
-            <ul class="tags__list">
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Business</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Freelance</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Money</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Experience</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Lifestyle</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">SEO</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Wordpress</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Marketing</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">UX</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Modern</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Success</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Nature</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Productivity</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Sales page</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Sell</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Teamwork</a>
-              </li>
-              <li class="tags__list-item">
-                <a href="#" class="tags__link tags__link_decoration">Monetize</a>
-              </li>
-              
-            </ul>
-          </section>
-
-          <section class="newsletter column-side__newsletter">
-
-            <h2 class="newsletter__head">Email newsletter</h2>
-            <p class="newsletter__subtitle">Sign up to receive email updates and to hear what's going on.</p>
-            <input type="text" class="newsletter__name" placeholder="Your name">
-            <input type="email" class="newsletter__email" placeholder="Your email adress">
-            <button class="big-button newsletter__big-button">Subscribe to newsletter</button>
-
-          </section>
-
-        </div>
-
-      </div>
-
-      <section class="list-pages content__list-pages">
-        
-      </section>
-
-      <section class="most-popular content__most-popular">
-        <h2 class="most-popular__head">Most popular</h2>
-
-          <div class="most-popular__post-contain">
-
-            <article class="small-post small-post_shadow">
-              <img src="./static/images/most-popular/bmw1.png" alt="BMW" class="small-post__pic">
-              <p class="card small-post__card">Bmw</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-            <article class="small-post small-post_shadow">
-              <img src="./static/images/most-popular/bmw2.png" alt="BMW" class="small-post__pic">
-              <p class="card small-post__card">Bmw</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-            <article class="small-post small-post_shadow">
-              <img src="./static/images/most-popular/bmw3.png" alt="BMW" class="small-post__pic">
-              <p class="card small-post__card">Bmw</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-            <article class="small-post small-post_shadow">
-              <img src="./static/images/most-popular/bmw4.png" alt="BMW" class="small-post__pic">
-              <p class="card small-post__card">Bmw</p>
-              <a href="#" class="small-post__link">
-                <h3 class="small-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="small-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </article>
-
-          </div>
-            
-      </section>
-
-      
-    {% endblock content -%}
+      {% endblock content %}
     </main>
 
     <footer class="footer page__footer">
+      {% block footer %}
       <section class="footer__top-row">
         <div class="footer__about footer__about_margin_right">
           <p class="logo footer__logo">
-            Premium<span class="logo__card">CAR</span>
+            {{title.split()[0]}}<span class="logo__card">{{title.split()[1]}}</span>
           </p>
           <p class="footer__text">Short description about the company Lorem Ipsum
                                 is simply dummy text of the printing and typesetting industry.
@@ -421,75 +59,17 @@
             <h2 class="social-links__head">Keep in touch</h2>
   
             <ul class="social-links__list">
-  
+              {% block soc_menu_links -%}
+              {% for link in soc_links -%}
               <li class="social-links__list-item social-links__list-item_border">
-                <a href="#" class="social-links__link">
-                  <img src="./static/images/social-iconc/fb.PNG" alt="Facebook" class="social-links__pic">
+                <a href="{{link.url}}" class="social-links__link">
+                  <img src="{{link.icon}}" alt="{{link.alt}}" class="social-links__pic">
                 </a>
               </li>
-  
-              <li class="social-links__list-item social-links__list-item_border">
-                <a href="#" class="social-links__link">
-                  <img src="./static/images/social-iconc/tw.PNG" alt="Twitter" class="social-links__pic">
-                </a>
-              </li>
-  
-              <li class="social-links__list-item social-links__list-item_border">
-                <a href="#" class="social-links__link">
-                  <img src="./static/images/social-iconc/p.PNG" alt="P" class="social-links__pic">
-                </a>
-              </li>
-  
-              <li class="social-links__list-item social-links__list-item_border">
-                <a href="#" class="social-links__link">
-                  <img src="./static/images/social-iconc/g/google.PNG" alt="G" class="social-links__pic">
-                </a>
-              </li>
-  
-              <li class="social-links__list-item social-links__list-item_border">
-                <a href="#" class="social-links__link">
-                  <img src="./static/images/social-iconc/i/inst.PNG" alt="I" class="social-links__pic">
-                </a>
-              </li>
-  
+              {% endfor -%}
+              {% endblock soc_menu_links -%}
             </ul>
-  
           </div>
-  
-        </div>
-  
-        <div class="recent-posts footer__recent-posts">
-
-          <h2 class="recent-posts__head">Recent posts</h2>
-
-          <article class="row-post recent-posts__row-post recent-posts_shadow">
-            <img src="./static/images/recent-posts/ms.png" alt="Mercedes" class="row-post__pic">
-            <div class="row-post__annotation">
-              <a href="#" class="row-post__link">
-                <h3 class="row-post__title">One of Saturn’s largest rings may be newer...</h2>
-              </a>
-              <p class="row-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </div>
-          </article>
-          <article class="row-post recent-posts__row-post recent-posts_shadow">
-            <img src="./static/images/recent-posts/audi.png" alt="Audi" class="row-post__pic">
-            <div class="row-post__annotation">
-              <a href="#" class="row-post__link">
-                <h3 class="row-post__title">One of Saturn’s largest rings may be newer...</h2>
-              </a>
-              <p class="row-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </div>
-          </article>
-          <article class="row-post recent-posts__row-post recent-posts_shadow">
-            <img src="./static/images/recent-posts/fr.png" alt="Ferrari" class="row-post__pic">
-            <div class="row-post__annotation">
-              <a href="#" class="row-post__link">
-                <h3 class="row-post__title">One of Saturn’s largest rings may be newer...</h2>
-              </a>
-              <p class="row-post__subtitle">Rickie Baroch - June 6, 2019</p>
-            </div>
-          </article>
-  
         </div>
   
         <section class="newsletter footer__newsletter">
@@ -508,17 +88,16 @@
 
           <nav class="navigation">
             <ul class="navigation__link-list">
-              <li class="navigation__list-item navigation__list-item_border"><a href="#" class="navigation__link">Home</a></li>
-              <li class="navigation__list-item navigation__list-item_border"><a href="#" class="navigation__link">Article</a></li>
-              <li class="navigation__list-item navigation__list-item_border"><a href="#" class="navigation__link">Contact</a></li>
-              <li class="navigation__list-item navigation__list-item_border"><a href="#" class="navigation__link">Purchase</a></li>
-              <li class="navigation__list-item navigation__list-item_border"><a href="#" class="navigation__link">Recipes</a></li>             
+              {% for link in menu -%}
+              <li class="navigation__list-item navigation__list-item_border"><a href="{{link.url}}" class="navigation__link">{{link.title}}</a></li>
+              {% endfor -%}
             </ul>
           </nav>
         </div>
       </section>
 
 
+    {% endblock footer %}
     </footer>
 
   </div>
