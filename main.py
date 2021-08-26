@@ -35,7 +35,7 @@ soc_links = [{"alt": "F", "icon": "static/images/social-iconc/fb.PNG", "url": "/
 def main_page():
     db = get_db()
     dbase = FDataBase(db)
-    return render_template('home.html', title=title, menu=dbase.getMenu(), soc_links=soc_links)
+    return render_template('home.html', title=title, menu=dbase.getMenu(), soc_links=soc_links, posts=dbase.getArticles())
 
 
 @app.route('/profile')
@@ -45,14 +45,36 @@ def profile_none():
     return redirect(url_for('profile', username=session['userLogged']))
 
 
-@app.route('/profile/<username>')
+@app.route('/profile/<username>', methods=["POST", "GET"])
 def profile(username):
     db = get_db()
     dbase = FDataBase(db)
     if 'userLogged' not in session or session['userLogged'] != username:
         return redirect(url_for('login'))
 
+    if request.method == "POST" and request.form:
+        add_post()
+
     return render_template('profile.html', title=title, menu=dbase.getMenu(), soc_links=soc_links, username=username)
+
+
+def add_post():
+    db = get_db()
+    dbase = FDataBase(db)
+
+    if request.method == "POST":
+        print(request.form['author_ind'])
+        if len(request.form['article']) > 4 and len(request.form['post']) > 10:
+            res = dbase.addPost(request.form['article'], request.form['book'], request.form['author'],
+                                request.form['post'])
+            if not res:
+                flash('Ошибка добавления статьи', category='error')
+            else:
+                flash('Статья добавлена успешно', category='success')
+        else:
+            flash('Ошибка добавления статьи', category='error')
+
+    # return redirect(url_for('profile_none'))
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -85,7 +107,7 @@ def create_db():
 
 def get_db():
     """Устанавливает соединение с БД в момент запроса"""
-    if not hasattr(g, 'link.db'):
+    if not hasattr(g, 'link_db'):
         g.link_db = connect_db()
     return g.link_db
 
@@ -95,25 +117,6 @@ def close_db(error):
     """Закрывает соединение с БД"""
     if hasattr(g, 'link_db'):
         g.link_db.close()
-
-
-@app.route("/add_article", methods=["POST", "GET"])
-def addPost():
-    db = get_db()
-    dbase = FDataBase(db)
-
-    if request.method == "POST":
-        if len(request.form['article']) > 4 and len(request.form['post']) > 10:
-            res = dbase.addPost(request.form['article'], request.form['book'], request.form['author'], request.form['post'])
-            time.sleep(1)
-            if not res:
-                flash('Ошибка добавления статьи', category='error')
-            else:
-                flash('Статья добавлена успешно', category='success')
-        else:
-            flash('Ошибка добавления статьи', category='error')
-
-    return redirect(url_for('profile_none'))
 
 
 @app.route("/articles")

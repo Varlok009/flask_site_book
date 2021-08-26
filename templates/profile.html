@@ -7,10 +7,11 @@
     <div class="flash {{cat}}">{{msg}}</div>
     {% endfor %}
 
-<form action="{{url_for('addPost')}}" method="post" class="form form-new-post">
+<form action="{{url_for('profile', username=username)}}" method="post" class="form form-new-post">
 <p><label>Article title: </label> <input type="text" name="article" value="" requied />
     <p><label>Book title: </label> <input type="text" name="book" value="" requied />
     <p><label>Author article: </label> <input type="text" name="author" value="" requied />
+    <p><label>Author indif: </label> <input readonly type="text" name="author_ind" value="{{username}}" requied />
 <p><label>Article text:</label>
 <p><textarea name="post" rows=7 cols=40></textarea>
 <p><input type="submit" value="Add article" />

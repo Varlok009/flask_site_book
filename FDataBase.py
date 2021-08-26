@@ -20,7 +20,9 @@ class FDataBase:
 
     def addPost(self, article, book, author, post):
         try:
-            tm = math.floor(time.time())
+            # tm = math.floor(time.time())
+            tm_sec = time.localtime()
+            tm = time.strftime("%d/%m/%Y", tm_sec)
             self.__cur.execute("INSERT INTO posts VALUES(NULL, ?, ?, ?, ?, ?)", (article, book, author, post, tm))
             self.__db.commit()
         except sqlite3.Error as e:

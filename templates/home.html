@@ -61,39 +61,30 @@
               </p>
             </a>
           </article>
-
-
         </div>
-
       </section>
 
       <!-- Секция articles -->
-
+{% for post in posts -%}
       <div class="two-column content__two-column">
-
         <section class="column-main">
-
-          <article class="big-post column-main__big-post">
-            <div class="big-post__pic-container">
-              <img src="./static/images/main-posts/ms.png" alt="Black Mercedes" class="big-post__pic big-post__pic_transform_scale">
-            </div>
-            <div class="big-post__annotation">
-              <p class="card big-post__card">Vehicle</p>
-              <a href="#" class="big-post__link">
-                <h2 class="big-post__title">One of Saturn’s largest rings may be newer than anyone</h2>
-              </a>
-              <p class="big-post__subtitle">Rickie Baroch - June 6, 2019</p>
-              <p class="big-post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error
-              sit voluptatem accusantium doloremque laudantium, totam rem</p>
-            </div>
-          </article>
-
-        {% endblock article -%}
+            <article class="big-post column-main__big-post">
+                    <div class="big-post__pic-container">
+                        <img src="./static/images/main-posts/ms.png" alt="Black Mercedes" class="big-post__pic big-post__pic_transform_scale">
+                    </div>
+                    <div class="big-post__annotation">
+                        <p class="card big-post__card">{{post.book}}</p>
+                        <a href="#" class="big-post__link">
+                            <h2 class="big-post__title">{{post.article}}</h2>
+                        </a>
+                        <p class="big-post__subtitle">{{post.author}} - {{post.time}}</p>
+                        <p class="big-post__text">{{post.post}}</p>
+                    </div>
+            </article>
         </section>
-
-        </div>
-
+      </div>
+{% endfor -%}
+      {% endblock article -%}
       </div>
 
       </section>

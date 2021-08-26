@@ -1,8 +1,0 @@
-@import url(./__head/popular-posts__head.css);
-@import url(./__small-post/popular-posts__small-post.css);
-
-.popular-posts {
-    display: flex;
-    flex-direction: column;
-}
-

@@ -3,7 +3,24 @@
 {% block content %}
 {{ super() }}
 {% for post in posts -%}
-<p>Article name: {{post.article}}.
-    Article author name: {{post.author}}.
+
+    <div class="two-column content__two-column">
+        <section class="column-main">
+            <article class="big-post column-main__big-post">
+                    <div class="big-post__pic-container">
+                        <img src="./static/images/main-posts/ms.png" alt="Black Mercedes" class="big-post__pic big-post__pic_transform_scale">
+                    </div>
+                    <div class="big-post__annotation">
+                        <p class="card big-post__card">{{post.book}}</p>
+                        <a href="#" class="big-post__link">
+                            <h2 class="big-post__title">{{post.article}}</h2>
+                        </a>
+                        <p class="big-post__subtitle">{{post.author}} - {{post.time}}</p>
+                        <p class="big-post__text">{{post.post}}</p>
+                    </div>
+            </article>
+        </section>
+    </div>
+
 {% endfor -%}
 {% endblock content %}
