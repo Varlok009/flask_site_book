@@ -5,6 +5,7 @@ import sqlite3
 import os
 from FDataBase import FDataBase
 from UserLogin import UserLogin
+from forms import LoginForm, RegisterForm
 
 BATABASE = 'site.db'
 DEBUG = True
@@ -123,21 +124,21 @@ def add_post():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
+    form = LoginForm()
 
     if current_user.get_id():
         return redirect(url_for('profile_none'))
 
-    if request.method == "POST":
+    if form.validate_on_submit():
         user = dbase.getUserEmail(request.form['email'])
-        if user and check_password_hash(user['psw'], request.form['psw']):
+        if user and check_password_hash(user['psw'], form.password.data):
             user_login = UserLogin().create(user)
-            print(user_login)
             login_user(user_login)
-            return redirect(url_for('index'))
+            return redirect(request.args.get("next") or url_for("profile_none"))
 
         flash("Неверная пара логин/пароль", "error")
 
-    return render_template('login.html', title=title, soc_links=soc_links, menu=dbase.getMenu())
+    return render_template('login.html', title=title, soc_links=soc_links, menu=dbase.getMenu(), form=form)
 
 
 @app.route('/logout')
@@ -150,20 +151,18 @@ def logout():
 
 @app.route("/register", methods=["POST", "GET"])
 def register():
-    if request.method == "POST":
-        session.pop('_flashes', None)
-        if len(request.form['name']) > 4 and len(request.form['email']) > 4 \
-                and len(request.form['psw']) > 4 and request.form['psw'] == request.form['psw2']:
-            hash_psw = generate_password_hash(request.form['psw'])
-            res = dbase.addUser(request.form['name'], request.form['email'], hash_psw)
-            if res:
-                flash("Вы успешно зарегистрированы", "success")
-                return redirect(url_for('login'))
-            else:
-                flash("Ошибка при добавлении в БД", "error")
+    form = RegisterForm()
+    if form.validate_on_submit():
+        # session.pop('_flashes', None)
+        hash_psw = generate_password_hash(request.form['password'])
+        res = dbase.addUser(request.form['name'], request.form['email'], hash_psw)
+        if res:
+            flash("Вы успешно зарегистрированы", "success")
+            return redirect(url_for('login'))
         else:
-            flash("Неверно заполнены поля", "error")
-    return render_template('register.html', title=title, soc_links=soc_links, menu=dbase.getMenu())
+            flash("Ошибка при добавлении в БД", "error")
+
+    return render_template('register.html', title=title, soc_links=soc_links, menu=dbase.getMenu(), form=form)
 
 
 @app.route("/posts")
