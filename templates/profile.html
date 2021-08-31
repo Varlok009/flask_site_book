@@ -16,6 +16,26 @@
 <p><textarea name="post" rows=7 cols=40></textarea>
 <p><input type="submit" value="Add article" />
 </form>
+
+<a href="{{url_for('logout')}}">Выйти из профиля</a>
+                user id: {{current_user.get_id()}}
+
+{% for post in posts -%}
+
+<div class="two-column content__two-column">
+        <section class="column-main">
+            <article class="big-post column-main__big-post">
+                    <div class="post">
+                        <p class="card big-post__card">{{post.book}}</p>
+                            <h2 class="">{{post.article}}</h2>
+                        <p class="big-post__subtitle">{{post.author}} - {{post.time}}</p>
+                        <p class="big-post__text">{{post.post}}</p>
+                    </div>
+            </article>
+        </section>
+</div>
+
+{% endfor -%}
 {% endblock content %}
 
 

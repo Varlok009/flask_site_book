@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content -%}
+{{ super() }}
+<p>Страница доступна только авторизованным пользователям.
+  <p><a href="{{url_for('login')}}">Войти</a> в свой профиль
+{% endblock content -%}

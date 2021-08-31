@@ -3,9 +3,12 @@
 {% block content %}
 {{ super() }}
 <form action="/login" method="post" class="form from-login">
-<p><label>Имя: </label> <input type="text" name="username" value="" required/>
-<p><label>Пароль: </label> <input type="password" name="psw" value="" required/>
-<p><input type="submit" value="Войти" />
+<p><label>Email: </label> <input type="text" name="email" value="" required/>
+<p><label>Password: </label> <input type="password" name="psw" value="" required/>
+    <p><input type="checkbox" name="remainme" /> Remeinme
+<p><input type="submit" value="Entry" />
+
+    <p><a href="{{url_for('register')}}">Registration</a>
 </form>
 {% endblock content %}
 
